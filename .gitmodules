@@ -31,3 +31,6 @@
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
+[submodule ".vim/bundle/vim-arduino"]
+	path = .vim/bundle/vim-arduino
+	url = https://github.com/tclem/vim-arduino.git

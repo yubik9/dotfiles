@@ -80,6 +80,8 @@ augroup vimrcEx
   autocmd FileType python set sw=4 sts=4 et
 
   autocmd! BufRead,BufNewFile *.sass setfiletype sass
+  au BufRead,BufNewFile *.pde set filetype=arduino
+  au BufRead,BufNewFile *.ino set filetype=arduino
 
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
