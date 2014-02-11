@@ -34,3 +34,6 @@
 [submodule ".vim/bundle/vim-arduino"]
 	path = .vim/bundle/vim-arduino
 	url = https://github.com/tclem/vim-arduino.git
+[submodule ".vim/bundle/grep"]
+	path = .vim/bundle/grep
+	url = https://github.com/yegappan/grep.git
