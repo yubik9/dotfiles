@@ -47,6 +47,7 @@ set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+set guifont=Inconsolata\ 14
 " display incomplete commands
 set showcmd
 " Enable highlighting for syntax
@@ -95,10 +96,10 @@ augroup END
 " COLOR
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :set t_Co=256
-:set background=dark
-:color grb256
+":set background=dark
+:color night
+highlight Normal ctermbg=NONE
 ":color github
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

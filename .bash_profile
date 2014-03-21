@@ -37,7 +37,7 @@ alias gc=git_commit_fancy
 alias gph='git push'
 alias gp='git pull'
 
-alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias e='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
 # system monitoring
 alias topcpu='ps aux | sort -n &2 | tail -10'  # top 10 cpu processes
