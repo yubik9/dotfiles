@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/grep"]
 	path = .vim/bundle/grep
 	url = https://github.com/yegappan/grep.git
+[submodule ".vim/bundle/vim-json"]
+	path = .vim/bundle/vim-json
+	url = https://github.com/elzr/vim-json.git
