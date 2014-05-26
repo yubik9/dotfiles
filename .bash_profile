@@ -39,6 +39,7 @@ alias gph='git push'
 alias gp='git pull'
 
 alias e='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias bnc='(bundle check || bundle install --path vendor/bundle)'
 
 # system monitoring
 alias topcpu='ps aux | sort -n &2 | tail -10'  # top 10 cpu processes
