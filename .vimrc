@@ -165,6 +165,9 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+nmap <F6> :cn<cr>
+nmap <F7> :cp<cr>
+
 au BufRead,BufNewFile *.hamlc set ft=haml
 
 " Strip trailing whitespace
