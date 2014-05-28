@@ -40,3 +40,9 @@
 [submodule ".vim/bundle/vim-json"]
 	path = .vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
+[submodule ".vim/bundle/ag.vim"]
+	path = .vim/bundle/ag.vim
+	url = https://github.com/rking/ag.vim.git
+[submodule ".vim/bundle/jst.vim"]
+	path = .vim/bundle/jst.vim
+	url = https://github.com/briancollins/vim-jst.git
