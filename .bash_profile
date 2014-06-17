@@ -40,6 +40,10 @@ alias gp='git pull'
 
 alias e='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias bnc='(bundle check || bundle install --path vendor/bundle)'
+alias be='bundle exec'
+
+alias rrst='touch tmp/restart.txt'
+alias prst='touch ~/.pow/restart.txt'
 
 # system monitoring
 alias topcpu='ps aux | sort -n &2 | tail -10'  # top 10 cpu processes
