@@ -46,3 +46,6 @@
 [submodule ".vim/bundle/jst.vim"]
 	path = .vim/bundle/jst.vim
 	url = https://github.com/briancollins/vim-jst.git
+[submodule ".vim/bundle/command-t"]
+	path = .vim/bundle/command-t
+	url = git://git.wincent.com/command-t.git

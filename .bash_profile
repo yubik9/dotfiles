@@ -51,3 +51,7 @@ alias topmem='ps aux | sort -n &3 | tail -10'  # top 10 memory processes
 
 # disk usage
 alias duf='du -sk * | sort -n | perl -ne '\''($s,$f)=split(m{\t});for (qw(K M G)) {if($s<1024) {printf("%.1f",$s);print "$_\t$f"; last};$s=$s/1024}'\'
+
+# heroku changes
+alias hc='git --no-pager log --merges --pretty=format:"%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%C(yellow)%d%Creset" --date=short production..master'
+alias hdm='git --no-pager diff production master -- db/migrate'
