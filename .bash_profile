@@ -55,3 +55,7 @@ alias duf='du -sk * | sort -n | perl -ne '\''($s,$f)=split(m{\t});for (qw(K M G)
 # heroku changes
 alias hc='git --no-pager log --merges --pretty=format:"%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%C(yellow)%d%Creset" --date=short production..master'
 alias hdm='git --no-pager diff production master -- db/migrate'
+
+# services
+alias start_postgres='postgres -D /usr/local/var/postgres'
+alias start_redis='redis-server /usr/local/etc/redis.conf'
