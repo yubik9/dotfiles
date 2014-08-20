@@ -59,3 +59,6 @@ alias hdm='git --no-pager diff production master -- db/migrate'
 # services
 alias start_postgres='postgres -D /usr/local/var/postgres'
 alias start_redis='redis-server /usr/local/etc/redis.conf'
+
+# rspec
+alias pspec='bin/parallel_specs --processes 4'
