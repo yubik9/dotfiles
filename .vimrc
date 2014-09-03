@@ -157,7 +157,7 @@ else
     let g:rspec_command = "!bundle exec rspec {spec}"
 end
 
-let g:rspec_command = '!bundle exec spring rspec {spec}'
+let g:rspec_command = '!bundle exec rspec {spec}'
 
 " Rspec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
