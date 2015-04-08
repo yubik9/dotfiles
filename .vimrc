@@ -188,3 +188,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
   \ 'file': '\.exe$\|\.so$\|\.dat$'
   \ }
+
+let &colorcolumn=join(range(81,999),",")
+highlight ColorColumn ctermbg=235 guibg=#000000
+let &colorcolumn="81,".join(range(81,999),",")
