@@ -66,3 +66,7 @@ alias start_redis='redis-server /usr/local/etc/redis.conf'
 
 # rspec
 alias pspec='bin/parallel_specs --processes 4'
+
+# dokku
+alias dokku='ssh -t dokku@apps.devhub.co'
+
