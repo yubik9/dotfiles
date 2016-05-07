@@ -38,13 +38,8 @@ alias gc=git_commit_fancy
 alias gph='git push'
 alias gp='git pull'
 
-alias e='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias bnc='(bundle check || bundle install --path vendor/bundle)'
 alias be='bundle exec'
-alias rs='HOST=localhost:3000 be unicorn -c tmp/unicorn.rb'
-
-alias rrst='touch tmp/restart.txt'
-alias prst='touch ~/.pow/restart.txt'
 
 # system monitoring
 alias topcpu='ps aux | sort -n &2 | tail -10'  # top 10 cpu processes
@@ -69,4 +64,3 @@ alias pspec='bin/parallel_specs --processes 4'
 
 # dokku
 alias dokku='ssh -t dokku@apps.devhub.co'
-
