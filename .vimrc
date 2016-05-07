@@ -4,7 +4,7 @@
 "
 " load bundles usng pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#incubate()
+call pathogen#infect('bundle/{}')
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
