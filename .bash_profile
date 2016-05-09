@@ -34,6 +34,7 @@ alias keys=keys
 
 # Alias
 
+alias ls='ls -G'
 alias gc=git_commit_fancy
 alias gph='git push'
 alias gp='git pull'
