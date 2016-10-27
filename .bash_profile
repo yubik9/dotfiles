@@ -12,7 +12,7 @@ fi
 
 # Functions
 function git_commit_fancy() {
-  git commit -m "$*"
+  git commit -S -m "$*"
 }
 
 # Showing current branch
