@@ -44,6 +44,7 @@ alias ls='ls -G'
 alias gc=git_commit_fancy
 alias gph='git push'
 alias gp='git pull'
+alias w='curl -4 wttr.in/sydney'
 
 alias bnc='(bundle check || bundle install --path vendor/bundle)'
 alias be='bundle exec'
