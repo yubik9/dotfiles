@@ -4,10 +4,10 @@
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 [ -f ~/.gpg-agent-info ] && source ~/.gpg-agent-info
-if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
-  export GPG_AGENT_INFO
+if [ -S "$HOME/.gnupg/S.gpg-agent.ssh" ]; then
+  export SSH_AUTH_SOCK="$HOME/.gnupg/S.gpg-agent.ssh"
 else
-  eval $( gpg-agent --daemon --write-env-file ~/.gpg-agent-info )
+  eval $( gpg-agent --daemon )
 fi
 
 # Functions
