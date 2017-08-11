@@ -49,6 +49,9 @@ alias w='curl -4 wttr.in/sydney'
 alias bnc='(bundle check || bundle install --path vendor/bundle)'
 alias be='bundle exec'
 
+alias docker_cc='docker ps -a | grep "Exited" | awk "{print $1}" | xargs docker stop | xargs docker rm'
+alias docker_ci='docker images | grep "<none>" | awk "{print $3}" | xargs docker rmi'
+
 # system monitoring
 alias topcpu='ps aux | sort -n &2 | tail -10'  # top 10 cpu processes
 alias topmem='ps aux | sort -n &3 | tail -10'  # top 10 memory processes
