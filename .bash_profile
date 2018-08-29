@@ -75,3 +75,10 @@ alias pspec='bin/parallel_specs --processes 4'
 
 # dokku
 alias dokku='ssh -t dokku@apps.devhub.co'
+
+# Golang
+
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
