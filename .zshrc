@@ -29,6 +29,17 @@ function parse_git_branch {
 
 export PS1='%(?.%F{green}🐶 🐶 🐶 .%F{red}💥 💥 💥 %? )$(parse_git_branch)$%f '
 setopt PROMPT_SUBST
+# expire duplicates first
+setopt HIST_EXPIRE_DUPS_FIRST
+# do not store duplications
+setopt HIST_IGNORE_DUPS
+#ignore duplicates when searching
+setopt HIST_FIND_NO_DUPS
+# removes blank lines from history
+setopt HIST_REDUCE_BLANKS
+setopt CORRECT_ALL
+bindkey "[D" backward-word
+bindkey "[C" forward-word
 #shopt -s cdspell
 
 # Copy SSH Key to Clipboard
