@@ -27,7 +27,8 @@ function parse_git_branch {
   | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
 }
 
-export PS1='\[\033[32m\]🐶 🐶 🐶  \w$(parse_git_branch)$\[\033[0m\] '
+export PS1='%(?.%F{green}🐶 🐶 🐶 .%F{red}💥 💥 💥 %? )$(parse_git_branch)$%f '
+setopt PROMPT_SUBST
 #shopt -s cdspell
 
 # Copy SSH Key to Clipboard
