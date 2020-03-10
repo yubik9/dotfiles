@@ -27,7 +27,7 @@ function parse_git_branch {
   | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty))/"
 }
 
-export PS1='%(?.%F{green}🐶 🐶 🐶 .%F{red}💥 💥 💥 %? )$(parse_git_branch)$%f '
+export PS1='%F{green}%m%f %(?.%F{green}🐶 🐶 🐶 .%F{red}💥 💥 💥 %? )%1d $(parse_git_branch)$%f '
 setopt PROMPT_SUBST
 # expire duplicates first
 setopt HIST_EXPIRE_DUPS_FIRST
