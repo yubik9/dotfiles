@@ -40,6 +40,8 @@ setopt HIST_REDUCE_BLANKS
 setopt CORRECT_ALL
 bindkey "[D" backward-word
 bindkey "[C" forward-word
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
 #shopt -s cdspell
 
 # Copy SSH Key to Clipboard
@@ -91,7 +93,7 @@ alias dokku='ssh -t dokku@apps.devhub.co'
 # Golang
 
 export GOPATH=$HOME/go
-export GOROOT=/usr/local/opt/go/libexec
+export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
