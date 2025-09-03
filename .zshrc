@@ -90,10 +90,19 @@ alias pspec='bin/parallel_specs --processes 4'
 # dokku
 alias dokku='ssh -t dokku@apps.devhub.co'
 
+# kitten
+alias ssh='env TERM=xterm-256color ssh' # allows kitty to work with ssh
+
 # Golang
 
 export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+export PATH=/Users/jimmyfan/.local/share/solana/install/active_release/bin:$PATH
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
