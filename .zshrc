@@ -3,11 +3,19 @@
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-[ -f ~/.gpg-agent-info ] && source ~/.gpg-agent-info
-if [ -S "$HOME/.gnupg/S.gpg-agent.ssh" ]; then
-  export SSH_AUTH_SOCK="$HOME/.gnupg/S.gpg-agent.ssh"
-else
-  eval $( gpg-agent --daemon )
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+# gpg-agent
+if command -v gpg-agent >/dev/null 2>&1; then
+  [ -f ~/.gpg-agent-info ] && source ~/.gpg-agent-info
+  if [ -S "$HOME/.gnupg/S.gpg-agent.ssh" ]; then
+    export SSH_AUTH_SOCK="$HOME/.gnupg/S.gpg-agent.ssh"
+  else
+    eval $( gpg-agent --daemon )
+  fi
 fi
 
 # Functions
@@ -53,7 +61,6 @@ function keys() {
 alias keys=keys
 
 # Alias
-
 alias ls='ls -G'
 alias gc=git_commit_fancy
 alias gph='git push'
@@ -87,9 +94,6 @@ alias start_redis='redis-server /usr/local/etc/redis.conf'
 # rspec
 alias pspec='bin/parallel_specs --processes 4'
 
-# dokku
-alias dokku='ssh -t dokku@apps.devhub.co'
-
 # kitten
 alias ssh='env TERM=xterm-256color ssh' # allows kitty to work with ssh
 
@@ -99,10 +103,7 @@ export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
-export PATH=/Users/jimmyfan/.local/share/solana/install/active_release/bin:$PATH
-export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
-export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+
+export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
