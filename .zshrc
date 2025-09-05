@@ -100,6 +100,12 @@ alias pspec='bin/parallel_specs --processes 4'
 # kitten
 alias ssh='env TERM=xterm-256color ssh' # allows kitty to work with ssh
 
+# jlceda2kicad
+function e2k() {
+  easyeda2kicad --full --lcsc_id="$*"
+}
+alias e2k=e2k
+
 # Golang
 
 export GOPATH=$HOME/go
