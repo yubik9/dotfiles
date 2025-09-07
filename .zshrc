@@ -106,6 +106,9 @@ function e2k() {
 }
 alias e2k=e2k
 
+# clean .DS_STORE
+alias clean_ds='find . -name ".DS_Store" -type f -delete'
+
 # Golang
 
 export GOPATH=$HOME/go
